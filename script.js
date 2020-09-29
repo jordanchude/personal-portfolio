@@ -6,3 +6,10 @@
 
 //customized json
 // https://spreadsheets.google.com/feeds/list/11lnTz3OBSIe-60N-j3JCw09E-zJCTuMizcRa6NaJXVs/od6/public/values?alt=json 
+
+const app = new Vue({
+    el: '#app',
+    data: {
+        test: ["here", "we", "go"]
+    }
+});

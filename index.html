@@ -17,14 +17,19 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
+    <!-- VUE -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
     <!-- USER STYLES AND SCRIPTS -->
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
+
 <body class="container-fluid remove-padding">
     <!-- NAVBAR -->
     <div class="row">
         <div class="col">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
                 <a class="navbar-brand" href="#">Navbar</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -78,7 +83,8 @@
 
     <!-- WHERE I'VE WORKED -->
     <div class="row where-ive-worked">
-        <h1>My History</h1>
+        <div class="lifted-resume col-9">
+        <h1 class="history-text">Background</h1>
         <div class="where-ive-worked-resume">
             <div class="col-3">
                     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
@@ -88,7 +94,7 @@
                     <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Misc</a>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-9">
                     <div class="tab-content" id="v-pills-tabContent">
                     <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                         <h3>Software Engineering Fellow</h3>
@@ -144,6 +150,28 @@
                     <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">Completed a 500-hour, full-time and full-stack program conducted in a remote setting, providing experience with the latest front- and back-end programming languages, tools, and methodologies including HTML5, CSS, jQuery, Node, Express, MongoDB, Mongoose, Mongo Atlas, Ruby, Rails, Object Oriented Programming (OOP), Ruby + Rails REST API development, SQL, Git, Github, Heroku, Python, Django, Python + Django REST API Development, and algorithms and data structures.</div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROJECTS -->
+    <div id="app">
+        <div class="row">
+            <div class="col">
+                <h1 class="projects-text">Projects</h1>
+            </div>
+        </div>
+        <div class="row projects">
+            <div v-for="project in test" class="col-3">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="..." alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{project}}</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>

@@ -1,3 +1,8 @@
+/* GLOBAL VARIABLES */
+    :root {
+        --main-color: #750FF7;
+    }
+
 /* BOOTSTRAP OVERRIDES */
 .remove-padding {
     padding: 0 ! important;
@@ -54,11 +59,11 @@
   /* ABOUT */
   #about {
       align-items: center;
-      background-color: #750FF7;
+      background-color: var(--main-color);
       color: white;
       display: flex;
       flex-direction: column;
-      padding: 5% 0 5% 0;
+      padding: 5% 0 10% 0;
       justify-content: center;
       text-align: justify;
   }
@@ -72,7 +77,8 @@
 
   /* WHERE I'VE WORKED */
   .where-ive-worked {
-      padding: 5% 0 5% 0;
+      padding: 0 0 5% 0;
+      margin-top: -7.5%;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -85,5 +91,32 @@
       flex-direction: row;
       justify-content: center;
       flex-wrap: nowrap;
+  }
+
+  .lifted-resume {
+      background: white;
+      border: 1px solid var(--main-color);
+      border-radius: 20px;
+      box-shadow: 1px 1px 5px var(--main-color);
+      padding: 10px;
+  }
+
+  .history-text {
+      text-align: center;
+  }
+
+  /* PROJECTS */
+  .projects-text {
+      text-align: center;
+  }
+
+  #app {
       width: 100%;
+      margin: 0 auto;
+  }
+
+  .projects {
+      display: flex;
+      justify-content: center;
+      align-items: center;
   }
