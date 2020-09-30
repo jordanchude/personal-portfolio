@@ -10,6 +10,14 @@
 const app = new Vue({
     el: '#app',
     data: {
-        test: ["here", "we", "go"]
+        projects: []
+    },
+    beforeCreate: function() {
+        fetch('https://spreadsheets.google.com/feeds/list/11lnTz3OBSIe-60N-j3JCw09E-zJCTuMizcRa6NaJXVs/od6/public/values?alt=json ')
+        .then(response => response.json())
+        .then(data => {
+            this.projects = data
+            console.log(data)
+        })
     }
 });
