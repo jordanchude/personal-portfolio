@@ -13,11 +13,22 @@ const app = new Vue({
         projects: []
     },
     beforeCreate: function() {
-        fetch('https://spreadsheets.google.com/feeds/list/11lnTz3OBSIe-60N-j3JCw09E-zJCTuMizcRa6NaJXVs/od6/public/values?alt=json ')
+        // call in API from link
+        fetch('https://spreadsheets.google.com/feeds/list/11lnTz3OBSIe-60N-j3JCw09E-zJCTuMizcRa6NaJXVs/od6/public/values?alt=json')
         .then(response => response.json())
         .then(data => {
-            this.projects = data
-            console.log(data)
+            const projects = data.feed.entry.map(entry => {
+                return { //returns new object with the following properties
+                    title: entry.gsx$title.$t, // project title
+                    image: entry.gsx$image.$t, // project image
+                    stack: entry.gsx$techstack.$t, // project stack
+                    description: entry.gsx$description.$t, // project description
+                    url: entry.gsx$deployedurl.$t, // project deployed url
+                    frontend: entry.gsx$frontendrepository.$t, // project frontend repo
+                    backend: entry.gsx$backendrepository.$t // project backend repo
+                 }
+               })
+               this.projects = projects
         })
     }
 });
