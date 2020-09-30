@@ -29,7 +29,7 @@
 <body class="container-fluid remove-padding">
     <!-- NAVBAR -->
     <div class="row">
-        <div class="col-12">
+        <div class="col">
             <nav class="navbar navbar-expand-lg navbar-dark bg-light fixed-top">
                 <a class="navbar-brand" href="#home">JORDAN WILLIAMS</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,14 +68,16 @@
                     <a class="btn hero-btn btn-lg" href="#app" role="button">Portfolio</a>
                     <a class="btn hero-btn btn-lg" href="#contact" role="button">Let's Work</a>
                 </div>
-                <a href="#"><div class="arrow-down"><i class="fas fa-chevron-down"></i></div></a>
+                <div class="arrow">
+                    <a href="#"><div class="arrow-down"><i class="fas fa-chevron-down"></i></div></a>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- ABOUT -->
     <div class="row" id="about">
-        <div class="col-6 about-container">
+        <div class="col-sm-12 col-md-8 col-lg-6 about-container">
             <h1>Hi, I am Jordan. Nice to meet you!</h1>
             <p>I am a software engineer with a background in the music industry. At my core, I am an organized thinker that loves problem solving. While in music, I developed both of these skills through finding creative and efficient ways to bring artists to market and, as a software engineer, I utilize these skills through creative and efficient ways to develop reliable applications. I am passionate about contributing to work that I am proud of and that benefits society, and look forward to life's challenges or error messages as an opportunity for growth.</p>
         </div>
@@ -162,7 +164,7 @@
             </div>
         </div>
         <div class="row projects">
-            <div v-for="project in projects" class="col-4">
+            <div v-for="project in projects" class="col-sm-12 col-md-6 col-lg-4">
                 <div class="card">
                     <img class="card-img-top" :src=project.image alt="Card image cap">
                     <div class="card-body">
