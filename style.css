@@ -1,6 +1,8 @@
 /* GLOBAL VARIABLES */
     :root {
         --main-color: #750FF7;
+        --main: #7511f6;
+        --secondary: #FFFFFF;
     }
 
 /* BOOTSTRAP OVERRIDES */
@@ -120,3 +122,55 @@
       justify-content: center;
       align-items: center;
   }
+
+  .card:hover {
+    box-shadow: 1px 1px 5px var(--main-color);
+    border: 1px solid var(--main-color);
+    transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+  }
+
+  /* contact */
+form {
+    background: var(--main);
+    border-radius: 20px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2%;
+    min-width: 250px;
+    width: 25%;
+}
+
+.form-input {
+    border: 3px solid var(--secondary);
+    margin-bottom: 20px;
+}
+
+.contact-header {
+    color: var(--main);
+    text-shadow: 1px 1px 1px black;
+}
+.contact-div {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px 20px 0px;
+}
+
+.contact-button {
+    background: var(--secondary);
+    color: var(--main);
+}
+
+.contact-button:hover {
+    background: var(--main);
+    border: 1px solid var(--secondary);
+    color: var(--secondary);
+}
+
+#contact-form {
+    background: var(--secondary);
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
