@@ -118,7 +118,7 @@
     flex-direction: column;
     padding: 5% 0 10% 0;
     justify-content: center;
-    text-align: justify;
+    text-align: center;
 }
 
 .about-container {
@@ -239,4 +239,5 @@ footer {
     .arrow-down {
         left: 45%;
     }
+
 }
