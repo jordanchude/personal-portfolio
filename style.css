@@ -156,11 +156,28 @@
 }
 
 .resume-nav {
-    margin-right: 1%;
+    margin-right: auto;
+}
+
+.nav-pills > .nav-link.active {
+    background-color: var(--main-color)!important;
+    color: white;
+}
+
+.nav-pills > .nav-link {
+    color: black;
+}
+
+.pill-content {
+    margin-left: 1%;
 }
 
 .history-text {
     text-align: center;
+}
+
+.tab-pane {
+    margin-right: auto;
 }
 
 /* PROJECTS */
@@ -251,6 +268,10 @@ footer {
 
     .lifted-resume {
         width: 90%;
+    }
+
+    .pane-header {
+        text-align: center;
     }
 
 }
