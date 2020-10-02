@@ -61,8 +61,9 @@
     <div class="row layer" id="home">
         <div class="col-12 remove-padding">
             <div class="jumbotron hero remove-padding remove-margin">
+                <img src="https://res.cloudinary.com/dpjdvsigb/image/upload/v1601610665/circle-cropped_rddnjd.png" alt="jordan-circle-press-photo">
                 <h1 class="display-4">Jordan Williams</h1>
-                <p class="lead">Software Engineer, Podcast Host, Music Industry Professional</p>
+                <p class="lead">Full-Stack Software Engineer</p>
                 <div class="hero-buttons">
                     <a class="btn hero-btn btn-lg" href="#about" role="button">About</a>
                     <a class="btn hero-btn btn-lg" href="#app" role="button">Portfolio</a>
@@ -200,9 +201,9 @@
                             <strong>STACK</strong>: {{project.stack}} <br>
                             <strong>DESCRIPTION</strong>: {{project.description}}
                         </p>
-                        <a :href=project.url class="btn btn-primary" target="_blank">Live</a>
-                        <a :href=project.frontend class="btn btn-primary" target="_blank">Frontend</a>
-                        <a :href=project.backend class="btn btn-primary" target="_blank" v-if=project.backend>Backend</a>
+                        <a :href=project.url class="btn btn-primary project-button" target="_blank">Live</a>
+                        <a :href=project.frontend class="btn btn-primary project-button" target="_blank">Frontend</a>
+                        <a :href=project.backend class="btn btn-primary project-button" target="_blank" v-if=project.backend>Backend</a>
                     </div>
                 </div>
             </div>
@@ -230,7 +231,7 @@
                   <textarea name="message" placeholder="MESSAGE" class="form-input"></textarea>
                 </label>
               
-                <button type="submit">Send</button>
+                <button class="form-submit" type="submit">Send</button>
               </form>
         </div>
     </div>
@@ -240,10 +241,10 @@
     <!-- FOOTER -->
     <footer class="row footer">
         <div class="col icons">
-            <i class="fab fa-github-square fa-3x icon"></i>
-            <i class="fab fa-linkedin fa-3x icon"></i>
-            <i class="fab fa-instagram-square fa-3x icon"></i>
-            <i class="fab fa-twitter-square fa-3x icon"></i>
+            <a href="https://github.com/jordanchude" target="_blank"><i class="fab fa-github-square fa-3x icon"></i></a>
+            <a href="https://linkedin.com/in/jordanchude" target="_blank"><i class="fab fa-linkedin fa-3x icon"></i></a>
+            <a href="https://instagram.com/jordanchude" target="_blank"><i class="fab fa-instagram-square fa-3x icon"></i></a>
+            <a href="https://twitter.com/jordanchude" target="_blank"><i class="fab fa-twitter-square fa-3x icon"></i></a>
         </div>
     </footer>
 </body>
