@@ -191,16 +191,18 @@
         <div class="row projects">
             <div v-for="project in projects" class="col-sm-12 col-md-6 col-lg-4">
                 <div class="card">
-                    <img class="card-img-top" :src=project.image alt="Card image cap">
+                    <video class="card-img-top video" alt="Card image cap" muted controls loop onmouseover="this.play()" onmouseout="this.pause();">
+                            <source :src="project.image">
+                    </video>
                     <div class="card-body">
                         <h5 class="card-title">{{project.title}}</h5>
                         <p class="card-text">
                             <strong>STACK</strong>: {{project.stack}} <br>
-                            <strong>Description</strong>: {{project.description}}
+                            <strong>DESCRIPTION</strong>: {{project.description}}
                         </p>
-                        <a :href=project.url class="btn btn-primary">Live</a>
-                        <a :href=project.frontend class="btn btn-primary">Frontend</a>
-                        <a :href=project.backend class="btn btn-primary">Backend</a>
+                        <a :href=project.url class="btn btn-primary" target="_blank">Live</a>
+                        <a :href=project.frontend class="btn btn-primary" target="_blank">Frontend</a>
+                        <a :href=project.backend class="btn btn-primary" target="_blank" v-if=project.backend>Backend</a>
                     </div>
                 </div>
             </div>
@@ -212,7 +214,7 @@
         <div class="col contact-form">
                 <form
                 action="https://formspree.io/f/xrgobozp"
-                method="POST">
+                method="POST" target="_blank">
 
                 <h1 class="lets-work">Let's Work</h1>
                 
@@ -232,6 +234,8 @@
               </form>
         </div>
     </div>
+
+
     
     <!-- FOOTER -->
     <footer class="row footer">

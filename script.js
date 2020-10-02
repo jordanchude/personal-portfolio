@@ -1,11 +1,11 @@
 //google sheets public url
-//https://docs.google.com/spreadsheets/d/11lnTz3OBSIe-60N-j3JCw09E-zJCTuMizcRa6NaJXVs/edit#gid=0
+//https://docs.google.com/spreadsheets/d/1hON-KYp-qHHxBqSDlUAXoz_1yjIAzv1v5DCZIT0yRiM/edit#gid=0
 
 //json template
 // https://spreadsheets.google.com/feeds/list/    /od6/public/values?alt=json 
 
 //customized json
-// https://spreadsheets.google.com/feeds/list/11lnTz3OBSIe-60N-j3JCw09E-zJCTuMizcRa6NaJXVs/od6/public/values?alt=json 
+// https://spreadsheets.google.com/feeds/list/1hON-KYp-qHHxBqSDlUAXoz_1yjIAzv1v5DCZIT0yRiM/od6/public/values?alt=json
 
 const app = new Vue({
     el: '#app',
@@ -14,7 +14,7 @@ const app = new Vue({
     },
     beforeCreate: function() {
         // call in API from link
-        fetch('https://spreadsheets.google.com/feeds/list/11lnTz3OBSIe-60N-j3JCw09E-zJCTuMizcRa6NaJXVs/od6/public/values?alt=json')
+        fetch('https://spreadsheets.google.com/feeds/list/1hON-KYp-qHHxBqSDlUAXoz_1yjIAzv1v5DCZIT0yRiM/od6/public/values?alt=json')
         .then(response => response.json())
         .then(data => {
             const projects = data.feed.entry.map(entry => {
