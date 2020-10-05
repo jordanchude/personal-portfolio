@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=VT323&display=swap');
+
 /* GLOBAL VARIABLES */
 :root {
     --main-color: #8C52FF;
     --secondary: #FFFFFF;
+}
+
+h1 {
+    font-family: 'VT323', monospace;
 }
 
 
@@ -68,6 +74,12 @@
 
 .lead {
     text-align: center;
+    font-family: 'VT323', monospace;
+    font-size: 30px;
+}
+
+.hero-name {
+    font-family: 'VT323', monospace;
 }
 
 .hero-buttons {
@@ -76,6 +88,7 @@
 
 .display-4 {
     text-align: center;
+    font-family: 'Lobster', cursive;
 }
 
 .hero-btn {
