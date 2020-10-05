@@ -47,7 +47,7 @@
 /* HERO */
 
 .hero {
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.5);
     color: white;
     background-position: center;
     height: 85vh;
@@ -58,7 +58,7 @@
 }
 
 .layer {
-    background: url(https://res.cloudinary.com/dpjdvsigb/image/upload/v1594764618/Jordan_Chude_Williams_Press_Photo_han403.jpg);
+    background: url(https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
     background-position: center;
     background-repeat: repeat;
     overflow: hidden;
@@ -296,7 +296,6 @@ footer {
 
 @media (max-width: 576px) {
     .layer {
-       background: url(https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1366&q=80); 
        background-position: 57% 30%; 
     }
 
