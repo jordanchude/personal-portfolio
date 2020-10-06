@@ -353,6 +353,11 @@ footer {
         text-align: center;
     }
 
+    .resume-button {
+        display: flex;
+        justify-content: center;
+    }
+
     form {
         width: 50%;
     }
