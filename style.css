@@ -10,6 +10,10 @@ h1 {
     font-family: 'VT323', monospace;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 
 /* BOOTSTRAP OVERRIDES */
 .remove-padding {
