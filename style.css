@@ -157,14 +157,12 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* flex-wrap: nowrap; */
 }
 
 .where-ive-worked-resume {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    /* flex-wrap: nowrap; */
 }
 
 .lifted-resume {
@@ -187,10 +185,6 @@ h1 {
 
 .nav-pills > .nav-link {
     color: black;
-}
-
-.pill-content {
-    margin-left: 1%;
 }
 
 .history-text {
