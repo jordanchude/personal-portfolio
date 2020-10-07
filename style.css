@@ -50,6 +50,12 @@ h1 {
     margin-left: auto;
 }
 
+.nav-link:hover{
+    transform: scale(1.05);
+    transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+}
+
 /* HERO */
 
 .hero {
