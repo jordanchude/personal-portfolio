@@ -237,8 +237,9 @@ h1 {
 .card:hover {
 box-shadow: 1px 1px 5px var(--main-color);
 border: 1px solid var(--main-color);
-transition: all .4s ease;
--webkit-transition: all .4s ease;
+transform: scale(1.02);
+transition: all .5s ease;
+-webkit-transition: all .5s ease;
 }
 
 /* CONTACT FORM */
