@@ -1,12 +1,7 @@
-//google sheets public url
-//https://docs.google.com/spreadsheets/d/1hON-KYp-qHHxBqSDlUAXoz_1yjIAzv1v5DCZIT0yRiM/edit#gid=0
+// declare config variable
+var apiKey = config.API_KEY;
 
-//json template
-// https://spreadsheets.google.com/feeds/list/    /od6/public/values?alt=json 
-
-//customized json
-// https://spreadsheets.google.com/feeds/list/1hON-KYp-qHHxBqSDlUAXoz_1yjIAzv1v5DCZIT0yRiM/od6/public/values?alt=json
-
+// initiate vue instance
 const app = new Vue({
     el: '#app',
     data: {
@@ -14,21 +9,23 @@ const app = new Vue({
     },
     beforeCreate: function() {
         // call in API from link
-        fetch('https://spreadsheets.google.com/feeds/list/1hON-KYp-qHHxBqSDlUAXoz_1yjIAzv1v5DCZIT0yRiM/od6/public/values?alt=json')
+        fetch(`https://sheets.googleapis.com/v4/spreadsheets/1hON-KYp-qHHxBqSDlUAXoz_1yjIAzv1v5DCZIT0yRiM/values/Sheet1?key=${apiKey}`)
         .then(response => response.json())
         .then(data => {
-            const projects = data.feed.entry.map(entry => {
+            const projects = data.values.map(entry => {
                 return { //returns new object with the following properties
-                    title: entry.gsx$title.$t, // project title
-                    image: entry.gsx$image.$t, // project image
-                    stack: entry.gsx$techstack.$t, // project stack
-                    description: entry.gsx$description.$t, // project description
-                    url: entry.gsx$deployedurl.$t, // project deployed url
-                    frontend: entry.gsx$frontendrepository.$t, // project frontend repo
-                    backend: entry.gsx$backendrepository.$t // project backend repo
+                    title: entry[0], // project title
+                    image: entry[1], // project image
+                    stack: entry[2], // project stack
+                    description: entry[3], // project description
+                    url: entry[4], // project deployed url
+                    frontend: entry[5], // project frontend repo
+                    backend: entry[6] // project backend repo
                  }
                })
                this.projects = projects
+            //    console.log(this.projects);
+               console.log(data.values[0]);
         })
     }
 });
