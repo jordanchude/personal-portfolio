@@ -24,8 +24,6 @@ const app = new Vue({
                  }
                })
                this.projects = projects
-            //    console.log(this.projects);
-               console.log(data.values[0]);
         })
     }
 });
