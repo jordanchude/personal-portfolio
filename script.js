@@ -1,5 +1,5 @@
 // declare config variable
-var apiKey = config.API_KEY;
+var apiKey = process.env.API_KEY;
 
 // initiate vue instance
 const app = new Vue({
